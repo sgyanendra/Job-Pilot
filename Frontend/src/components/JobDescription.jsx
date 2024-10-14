@@ -23,7 +23,7 @@ const JobDescription = () => {
         console.log(singleJob?.applications?.some(application=>application.applicant===user?._id));
         const fetchAllJobs=async ()=>{
            try {
-               const res=await axios.get(`${JOB_API_END_POINT}/get/${jobId}`,{withCredentials:true});
+               const res=await axios.get(`https://job-pilot.onrender.com//api/v1/job/get/${jobId}`,{withCredentials:true});
                if(res.data.success){
                  setIsApplied(res.data.job.applications.some(application=>application.applicant===user?._id));          
                  dispatch(setSingleJob(res.data.job));

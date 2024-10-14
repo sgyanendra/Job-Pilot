@@ -11,7 +11,7 @@ const useGetAllJobs = () => {
      const fetchAllJobs=async ()=>{
         try {
            console.log(searchQuery);
-            const res=await axios.get(`${JOB_API_END_POINT}/get?keyword=${searchQuery}`,{withCredentials:true});
+            const res=await axios.get(`https://job-pilot.onrender.com//api/v1/job/get?keyword=${searchQuery}`,{withCredentials:true});
             console.log(res);
             if(res.data.success){
               dispatch(setAllJobs(res.data.jobs));          
