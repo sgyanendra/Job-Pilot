@@ -67,13 +67,9 @@ const appRouter = createBrowserRouter([
     path:"/admin/jobs/:id/applicants",
     element:<ProtectedRoute><Applicants/></ProtectedRoute> 
   },
-
-
 ]);
 
 function App() {
-
-
   return (
     <>
       <RouterProvider router={appRouter}/>

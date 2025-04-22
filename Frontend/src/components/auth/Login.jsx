@@ -44,7 +44,7 @@ const Login = () => {
                 dispatch(setUser(res.data.user));
                 navigate("/");
                 toast.success(res.data.message);
-            }
+              }
         } catch (error) {
             console.log(error.response.data.message);
         }finally{
